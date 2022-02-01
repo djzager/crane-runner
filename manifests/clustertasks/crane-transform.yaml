@@ -9,7 +9,7 @@ metadata:
 spec:
   steps:
     - name: crane-transform
-      image: quay.io/konveyor/crane-runner:latest
+      image: quay.io/djzager/crane-runner:d86e86f
       script: |
         /crane version
         /crane transform \

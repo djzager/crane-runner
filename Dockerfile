@@ -1,9 +1,9 @@
-FROM registry.ci.openshift.org/openshift/release:golang-1.16 as crane-bin
+FROM registry.ci.openshift.org/openshift/release:golang-1.17 as crane-bin
 
 ENV GOFLAGS "-mod=mod"
 WORKDIR /go/src/github.com/konveyor/crane
 
-RUN git clone https://github.com/konveyor/crane.git .
+RUN git clone https://github.com/djzager/crane.git --branch bump-client-go .
 RUN go build -a -o /build/crane main.go
 
 FROM registry.access.redhat.com/ubi8/ubi:latest

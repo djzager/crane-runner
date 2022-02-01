@@ -23,7 +23,7 @@ spec:
         The source cluster namespace from which to export resources.
   steps:
     - name: crane-export
-      image: quay.io/konveyor/crane-runner:latest
+      image: quay.io/djzager/crane-runner:d86e86f
       script: |
         /crane export \
           --context=$(params.src-context) \
